@@ -264,7 +264,7 @@ const Add = ({ token }) => {
         />
       </div>
 
-      <div className="flex flex-col sm:flex-row gap-2 w-full sm:gap-8">
+      <div className="flex flex-col gap-4 w-full max-w-md">
         <div>
           <p className="mb-2">Product category</p>
           {isLoadingCategories ? (
@@ -277,7 +277,7 @@ const Add = ({ token }) => {
             <select
               onChange={(e) => setCategory(e.target.value)}
               value={category}
-              className="w-full px-3 py-2"
+              className="w-full px-3 py-2 border rounded"
               disabled={isSubmitting}
             >
               {categories.map((cat) => (
@@ -294,7 +294,7 @@ const Add = ({ token }) => {
               <select
                 onChange={(e) => setSubCategory(e.target.value)}
                 value={subCategory}
-                className="w-full px-3 py-2"
+                className="w-full px-3 py-2 border rounded"
                 disabled={isSubmitting}
               >
                 <option value="">None</option>
@@ -321,7 +321,7 @@ const Add = ({ token }) => {
           <input
             onChange={(e) => setPrice(e.target.value)}
             value={price}
-            className="w-full px-3 py-2 sm:w-[120px]"
+            className="w-full px-3 py-2 border rounded"
             type="number"
             placeholder="25"
             disabled={isSubmitting}
@@ -333,7 +333,7 @@ const Add = ({ token }) => {
           <input
             onChange={(e) => setOriginalPrice(e.target.value)}
             value={originalPrice}
-            className="w-full px-3 py-2 sm:w-[120px]"
+            className="w-full px-3 py-2 border rounded"
             type="number"
             placeholder="e.g. 35"
             disabled={isSubmitting}
@@ -342,12 +342,13 @@ const Add = ({ token }) => {
             Leave blank for no discount shown.
           </p>
         </div>
+
         <div>
           <p className="mb-2">Product Code (SKU)</p>
           <input
             onChange={(e) => setSku(e.target.value)}
             value={sku}
-            className="w-full px-3 py-2 sm:w-[200px]"
+            className="w-full px-3 py-2 border rounded"
             type="text"
             placeholder="e.g. DS-2CD2143G2 / CCTV-001"
             disabled={isSubmitting}
@@ -362,7 +363,7 @@ const Add = ({ token }) => {
           <input
             onChange={(e) => setBrand(e.target.value)}
             value={brand}
-            className="w-full px-3 py-2 sm:w-[200px]"
+            className="w-full px-3 py-2 border rounded"
             type="text"
             placeholder="e.g. Hikvision"
             disabled={isSubmitting}
@@ -374,7 +375,7 @@ const Add = ({ token }) => {
           <input
             onChange={(e) => setModelName(e.target.value)}
             value={modelName}
-            className="w-full px-3 py-2 sm:w-[200px]"
+            className="w-full px-3 py-2 border rounded"
             type="text"
             placeholder="e.g. DS-2CD2143G2-I"
             disabled={isSubmitting}
